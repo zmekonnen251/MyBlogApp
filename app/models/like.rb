@@ -3,7 +3,7 @@ class Like < ApplicationRecord
   belongs_to:post , class_name: 'Post', foreign_key: 'post_id'
 
   def update_likes_counter(post)
-    Post.find_by(post_id: post.post_id).increment!(:likes_counter)
+    Post.find_by(post_id: self.post_id).increment!(:likes_counter)
   end
 
 end
