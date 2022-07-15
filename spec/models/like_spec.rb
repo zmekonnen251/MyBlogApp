@@ -4,8 +4,8 @@ RSpec.describe Like, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 
   before(:each) do
-    @user = User.create(name:'test name',bio: 'test bio', photo:'www.photourl.com/test.jpg')
-    @post = Post.create(title: 'Post title', text: 'Post text',author: @user)
+    @user = User.create(name: 'test name', bio: 'test bio', photo: 'www.photourl.com/test.jpg')
+    @post = Post.create(title: 'Post title', text: 'Post text', author: @user)
   end
 
   it 'it should create a like' do
