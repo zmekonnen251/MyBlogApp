@@ -24,9 +24,7 @@ default: &default
 development:
   <<: *default
   database: MyBlogApp_development
-  host: 127.0.0.1
-  username: user1
-  password: abcd1234
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
