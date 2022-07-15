@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id
   has_many :likes, foreign_key: :post_id
@@ -12,7 +14,7 @@ class Post < ApplicationRecord
     User.find(author_id).increment!(:posts_counter)
   end
 
-  def self.most_recent_comments
-    Comment.order(created_at: :desc).limit(5)
+  def most_recent_comments
+    Comment.where(post_id: id).order(created_at: :desc).limit(5)
   end
 end

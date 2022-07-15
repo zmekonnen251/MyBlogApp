@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-
   before(:each) do
     @user = User.create(name: 'test name', bio: 'test bio', photo: 'www.photourl.com/test.jpg')
     @post = Post.create(title: 'Post title', text: 'Post text', author: @user)
@@ -14,8 +14,8 @@ RSpec.describe Like, type: :model do
   end
 
   it 'The like counter should be incremented' do
-    Like.create(author: @user, post: @post)
-    Like.update_likes_counter
-    expect(@post.likes_counter).to eq(1)
+    like = Like.create(author: @user, post: @post)
+    like.update_likes_counter
+    expect(Post.first.likes_counter).to eq(1)
   end
 end

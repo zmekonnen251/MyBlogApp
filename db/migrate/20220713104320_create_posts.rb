@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePosts < ActiveRecord::Migration[7.0]
   def change
     create_table :posts do |t|
@@ -9,7 +11,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_reference :posts, :author, foreign_key: {to_table: :users}
-    add_index :posts, :comments_counter, order: {comments_counter: :desc}
+    add_reference :posts, :author, foreign_key: { to_table: :users }
+    add_index :posts, :comments_counter, order: { comments_counter: :desc }
   end
 end

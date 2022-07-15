@@ -1,0 +1,15 @@
+current directory: /home/zmekonnen251/Documents/Microverse/M-4/W-1/MyBlogApp/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.7 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20220715-26370-ejl7ya.rb extconf.rb
+creating Makefile
+
+current directory: /home/zmekonnen251/Documents/Microverse/M-4/W-1/MyBlogApp/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /home/zmekonnen251/Documents/Microverse/M-4/W-1/MyBlogApp/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/zmekonnen251/Documents/Microverse/M-4/W-1/MyBlogApp/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20220715-26370-1yza271/skiptrace/internal
