@@ -1,1 +1,17 @@
-<h1>Here is a user for a given id.</h1>
+<%= render partial: 'shared/user' ,locals:{user_data: @user}%>
+
+<br>
+
+<div class='bio-container'>
+  <h3 class='bio-container--heading'>Bio</h3>
+  <p class='bio-container--body'><%= @user.bio %></p>
+</div>
+
+<% @user.most_recent_posts.each do |post|%>
+<%= render partial: 'shared/post' ,locals:{post_data: post}%>
+<br>
+<%end%>
+
+<div class='btn-box'>
+   <button class='btn-posts'>See all posts</button>
+</div>
