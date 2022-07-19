@@ -1,1 +1,6 @@
-<h1>Here is a list of users in the app.</h1>
+<h1>List of Users</h1>
+
+<% @users.each do |user| %>
+  <%= render partial: 'shared/user' ,locals:{user_data: user}%>
+  <br>
+<%end%>

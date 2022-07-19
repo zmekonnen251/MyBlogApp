@@ -1,1 +1,7 @@
-<h1>Here is a list of posts for a given user.</h1>
+<%= render partial: 'shared/user' ,locals:{user_data: @user_data}%>
+<%@posts.each do |post|%>
+  <%= render partial: 'shared/post' ,locals:{post_data: post}%>
+  <br>
+  <%= render partial: 'shared/comment_container' ,locals:{comments_data: post.most_recent_comments}%>
+  <br>
+<%end%>
