@@ -1,3 +1,4 @@
 <%= render partial: 'shared/post_details' ,locals:{post_data: @post}%>
 <br>
+
 <%= render partial: 'shared/comment_container' ,locals:{comments_data: @post.most_recent_comments}%>

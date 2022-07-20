@@ -5,4 +5,8 @@ class Like < ApplicationRecord
   def update_likes_counter
     Post.find(post_id).increment!(:likes_counter)
   end
+
+  def decreament_likes_counter
+    Post.find(post_id).decrement!(:likes_counter)
+  end
 end
