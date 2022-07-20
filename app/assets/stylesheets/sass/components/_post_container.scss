@@ -31,4 +31,16 @@
     right: 2rem;
     font-size: 1.5rem;
   }
+
+  &--buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+.like-btn,
+.comment-btn {
+  padding: 0.2rem;
+  text-transform: uppercase;
 }
