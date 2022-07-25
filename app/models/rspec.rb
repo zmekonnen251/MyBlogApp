@@ -1,2 +1,0 @@
-class Rspec < ApplicationRecord
-end
