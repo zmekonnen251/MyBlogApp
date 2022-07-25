@@ -71,7 +71,7 @@ class PostsController < ApplicationController
       like.update_likes_counter
 
     else
-      flash[:success] = 'Success: you disliked this post'
+      flash.now[:success] = 'Success: you disliked this post'
       like = Like.where(post: post, author_id: user.id)[0]
       like.decreament_likes_counter
       like.destroy

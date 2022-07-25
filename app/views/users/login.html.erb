@@ -1,0 +1,11 @@
+<%= form_with method: :post,local: true,class: 'login-form' do |f|%>
+  <div class='form-box__title'>
+  <%= f.text_field :title,placeholder: 'Username' ,class: 'login-form__username'%>
+</div>
+
+<div class='form-box__title'>
+  <%= f.text_field :title,placeholder: 'Password',type: 'password' ,class: 'login-form__password'%>
+</div>
+
+<%= f.submit "Log in" ,class: 'login-form__login-btn' %>
+<%end%>
