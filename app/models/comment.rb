@@ -3,6 +3,6 @@ class Comment < ApplicationRecord
   belongs_to :post, class_name: 'Post', foreign_key: 'post_id'
 
   def update_comments_counter
-    Post.includes(:comments).find(post_id).increment!(:comments_counter)
+    self.post.increment!(:comments_counter)
   end
 end

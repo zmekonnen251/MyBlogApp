@@ -1,5 +1,5 @@
-<%= render partial: 'shared/user' ,locals:{user_data: @user_data}%>
-<%@posts.each do |post|%>
+<%= render partial: 'shared/user' ,locals:{user_data: @user}%>
+<%@user_posts.each do |post|%>
   <%= render partial: 'shared/post' ,locals:{post_data: post,current_user_id: @current_user_id}%>
   <br>
   <% unless post.comments_counter==0%>
@@ -7,3 +7,7 @@
   <br>
   <% end %>
 <%end%>
+
+<div class='pagination-btn-box'>
+<button class='pagination-btn'>Pagination</button>
+</div>
