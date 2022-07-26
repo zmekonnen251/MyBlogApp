@@ -9,4 +9,6 @@ class Like < ApplicationRecord
   def decreament_likes_counter
     self.post.decrement!(:likes_counter)
   end
+
+  after_create :update_likes_counter
 end

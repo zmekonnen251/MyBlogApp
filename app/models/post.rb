@@ -15,4 +15,6 @@ class Post < ApplicationRecord
   def most_recent_comments
     comments.order(created_at: :desc).includes(:post,:author).limit(5)
   end
+
+  after_create :update_posts_counter
 end

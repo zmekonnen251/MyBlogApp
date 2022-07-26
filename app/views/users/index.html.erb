@@ -1,5 +1,5 @@
 <% @users.each do |user| %>
-  <%= link_to user_path(id: user.id),method: 'get',class: 'user_link' do%>
+  <%= link_to user_path(id: user.id),method: 'get',class: 'user_link' ,id: user.name.downcase do%>
     <%= render partial: 'shared/user' ,locals:{user_data: user}%>
   <% end %>
   <br>
