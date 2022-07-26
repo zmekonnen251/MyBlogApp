@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User index page', type: :system do
+RSpec.describe 'User index page', type: :feature do
   describe 'GET /users/index' do
     before(:each) do
       @user_1 = User.create(name:'John',photo: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',bio:'John is a great person.')
@@ -41,16 +41,16 @@ RSpec.describe 'User index page', type: :system do
       scenario 'When user clicked it will redirect to user show page' do
         visit users_path
         sleep(2)
-        click_link(id:'john')
-        visit '/users/7'
+        click_link @user_1.name
+        # visit '/users/7'
         sleep(2)
-        expect(page.current_path).to eq user_path(id:@user_1.id)
+        expect(page.current_path).to eq user_path(@user_1.id)
       end
     end
   end
 end
 
-RSpec.describe 'User show page', type: :system do
+RSpec.describe 'User show page', type: :feature do
   describe 'GET /users/1' do
     before(:each) do
       @user_1 = User.create(name:'John',photo: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',bio:'John is a great person.')
@@ -123,7 +123,7 @@ RSpec.describe 'User show page', type: :system do
   end
 end
 
-RSpec.describe 'User posts index page', type: :system do
+RSpec.describe 'User posts index page', type: :feature do
   describe 'GET /users/1/posts' do
     before(:each) do
       @user_1 = User.create(name:'John',photo: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',bio:'John is a great person.')

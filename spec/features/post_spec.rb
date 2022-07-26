@@ -22,7 +22,7 @@ RSpec.describe 'Post Show Page', type: :feature do
     scenario 'displays the post\'s title' do
       visit user_post_path(user_id:@user_1.id,id:@post_1.id)
       sleep(2)
-      expect(page).to have_content('Post 1')
+      expect(page).to have_content('Post #1')
     end
 
     scenario 'displays the author\'s name' do
