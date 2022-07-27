@@ -12,8 +12,7 @@ RSpec.describe Like, type: :model do
   end
 
   it 'The like counter should be incremented' do
-    like = Like.create(author: @user, post: @post)
-    like.update_likes_counter
+    Like.create(author: @user, post: @post)
     expect(Post.first.likes_counter).to eq(1)
   end
 end

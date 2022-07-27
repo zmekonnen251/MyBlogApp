@@ -3,11 +3,11 @@ class Like < ApplicationRecord
   belongs_to :post, class_name: 'Post', foreign_key: 'post_id'
 
   def update_likes_counter
-    self.post.increment!(:likes_counter)
+    post.increment!(:likes_counter)
   end
 
   def decreament_likes_counter
-    self.post.decrement!(:likes_counter)
+    post.decrement!(:likes_counter)
   end
 
   after_create :update_likes_counter

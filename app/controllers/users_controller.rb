@@ -8,6 +8,5 @@ class UsersController < ApplicationController
     @user_id = current_user.id
   end
 
-  def login
-  end
+  def login; end
 end

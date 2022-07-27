@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @user_posts = @user.posts.all.includes(:comments)
-    
+
     @current_user_id = current_user.id
   end
 
   def show
-    @post = Post.where(author_id: params[:user_id]).where(id: params[:id]).includes(:author)[0]
+    @post = Post.where(author_id: params[:user_id]).where(id: params[:id])[0]
     @current_user_id = current_user.id
   end
 
