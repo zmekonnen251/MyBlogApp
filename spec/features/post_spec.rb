@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Post Show Page', type: :feature do
   describe 'GET /users/:user_id/posts/:id' do
-    before(:all) do
+    before(:each) do
       @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
       @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
       @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
@@ -30,7 +30,7 @@ RSpec.describe 'Post Show Page', type: :feature do
     end
 
     scenario 'displays how many comments the post has' do
-      visit user_post_path(userid: @user_1.id, id: @post1.id)
+      visit user_post_path(user_id: @user1.id, id: @post1.id)
       sleep(2)
       expect(page).to have_content('Comments: 3')
     end
