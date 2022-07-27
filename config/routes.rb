@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'users#index'
+  get '/index' => 'users#index'
+  get '/login' => 'users#login'
   get '/users/:user_id/posts', to:'posts#index', as: :user_posts
   get '/users/:user_id/posts/:id', to:'posts#show', as: :user_post
   get '/users', to:'users#index', as: :users

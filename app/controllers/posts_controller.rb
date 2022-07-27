@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(author_id: params[:user_id])
-    @user_data = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
+    @user_posts = @user.posts.all.includes(:comments)
+
     @current_user_id = current_user.id
   end
 
@@ -71,7 +72,7 @@ class PostsController < ApplicationController
       like.update_likes_counter
 
     else
-      flash[:success] = 'Success: you disliked this post'
+      flash.now[:success] = 'Success: you disliked this post'
       like = Like.where(post: post, author_id: user.id)[0]
       like.decreament_likes_counter
       like.destroy

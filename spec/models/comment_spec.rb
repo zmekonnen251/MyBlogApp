@@ -14,16 +14,14 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'The comment counter should be incremented' do
-    comment = Comment.create(text: 'Comment text', author: @user, post: @post)
-    comment.update_comments_counter
+    Comment.create(text: 'Comment text', author: @user, post: @post)
     expect(Post.first.comments_counter).to eq(1)
   end
 
   it 'The comment counter should be incremented for multiple comments for a post' do
-    comment = Comment.create(text: 'Comment text', author: @user, post: @post2)
-    comment.update_comments_counter
-    comment = Comment.create(text: 'Comment text', author: @user2, post: @post2)
-    comment.update_comments_counter
+    Comment.create(text: 'Comment text', author: @user, post: @post2)
+    Comment.create(text: 'Comment text', author: @user2, post: @post2)
+
     expect(Post.second.comments_counter).to eq(2)
   end
 end

@@ -21,8 +21,7 @@ RSpec.describe Post, type: :model do
 
   it 'It should update the posts counter' do
     user = User.create(name: 'test name', bio: 'test bio', photo: 'www.photourl.com/test.jpg')
-    post = Post.create(title: 'Post title', text: 'Post text', author: user)
-    post.update_posts_counter
+    Post.create(title: 'Post title', text: 'Post text', author: user)
     expect(User.first.posts_counter).to eq(1)
   end
 
