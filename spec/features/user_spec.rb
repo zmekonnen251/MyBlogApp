@@ -1,19 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe 'User Views', type: :system do
-  
-
   describe 'GET /users/index' do
     before(:each) do
-    @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
-    @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
-    @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
-    @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
-    @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
-    Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
-    Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
-    Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
-  end
+      @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
+      @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
+      @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
+      @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
+      @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
+      Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
+      Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
+      Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
+    end
 
     feature 'User index page' do
       scenario 'displays a list of users' do
@@ -49,15 +47,15 @@ RSpec.describe 'User Views', type: :system do
 
   describe 'User show page GET /users/1' do
     before(:each) do
-    @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
-    @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
-    @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
-    @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
-    @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
-    Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
-    Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
-    Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
-  end
+      @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
+      @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
+      @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
+      @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
+      @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
+      Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
+      Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
+      Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
+    end
     scenario 'displays a user\'s photo' do
       visit user_path(id: @user1.id)
       sleep(2)
@@ -109,15 +107,15 @@ RSpec.describe 'User Views', type: :system do
 
   describe 'User posts index page GET /users/1/posts' do
     before(:each) do
-    @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
-    @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
-    @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
-    @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
-    @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
-    Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
-    Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
-    Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
-  end
+      @user1 = User.create(name: 'John', photo: 'https://rb.gy/6kenwx', bio: 'John is a great person.')
+      @user2 = User.create(name: 'Jane', photo: 'https://rb.gy/owxkbp', bio: 'Jane is a great person.')
+      @post1 = Post.create(title: 'Post 1', text: 'This is the first post.', author: @user1)
+      @post2 = Post.create(title: 'Post 2', text: 'This is the second post.', author: @user1)
+      @post3 = Post.create(title: 'Post 3', text: 'This is the third post.', author: @user1)
+      Comment.create(text: 'This is the first comment.', author: @user2, post: @post1)
+      Comment.create(text: 'This is the second comment.', author: @user2, post: @post2)
+      Comment.create(text: 'This is the third comment.', author: @user2, post: @post3)
+    end
     scenario 'displays a user\'s name' do
       visit user_posts_path(user_id: @user1.id)
       sleep(2)
