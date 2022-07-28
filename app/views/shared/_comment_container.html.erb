@@ -1,7 +1,10 @@
   <ul class='comments-container'>
     <%comments_data.each do |comment|%>
       <li class='comments-container--list'>
-        <p><span class='commenter'><%=comment.author.name%></span> : <%=comment.text%></p>
+        <div><span class='commenter'><%=comment.author.name%></span> : <%=comment.text%>
+        
+        <%button_to 'Remove comment',user_post_comment_path(current_user, post_data, comment)%>
+        </div>
       </li>
     <%end%>
   </ul>

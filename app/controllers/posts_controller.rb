@@ -22,7 +22,6 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     @post.author_id = current_user.id
 
-
     respond_to do |format|
       format.html do
         if @post.save
@@ -56,7 +55,6 @@ class PostsController < ApplicationController
       render :new, locals: { post: @post }
     end
   end
-
 
   private
 
