@@ -25,4 +25,10 @@ class CommentsController < ApplicationController
       render :show, locals: { post: post }
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirec_to  user_post_comment_path
+  end
 end
