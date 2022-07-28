@@ -1,0 +1,30 @@
+@import '../abstract/variables';
+
+.login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+	gap: 1rem;
+	width: fit-content;
+	// max-width: 50%;
+	background-color: $color_light_gray;
+	padding: 20px;
+	margin: 1rem auto;
+	border-radius: 1rem;
+	box-shadow: 0.7rem 0.7rem 1rem rgba($color_black, 0.3);
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+}
+
+.field {
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
