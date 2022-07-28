@@ -17,7 +17,6 @@ class CommentsController < ApplicationController
     new_comment.save
 
     if new_comment.save
-      new_comment.update_comments_counter
       flash[:success] = 'Success: Comment created successfully'
       redirect_to user_post_path(post.author_id, post)
     else
@@ -27,8 +26,13 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirec_to  user_post_comment_path
+    @comment = Comment.find_by(id: params[:id], author_id: current_user.id, post_id: params[:post_id])
+    if @comment.destroy
+      flash[:success] = 'Success: Comment deleted successfully'
+      redirect_to user_post_path(@comment.post.author_id, @comment.post)
+    else
+      flash.now[:error] = 'Error: Comment deletion failed'
+      render :show, locals: { post: @comment.post }
+    end
   end
 end

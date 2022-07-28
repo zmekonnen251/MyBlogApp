@@ -2,8 +2,8 @@
     <%comments_data.each do |comment|%>
       <li class='comments-container--list'>
         <div><span class='commenter'><%=comment.author.name%></span> : <%=comment.text%>
-        <% if can? :destroy comments_data %>
-        <%button_to 'Remove comment',user_post_comment_path(current_user, post_data, comment), method: :delete %>
+        <% if can? :destroy ,comment %>
+          <%= button_to 'Remove comment',user_post_comment_path(current_user,comment.post, comment), method: :delete %>
         <% end %>
         </div>
       </li>
