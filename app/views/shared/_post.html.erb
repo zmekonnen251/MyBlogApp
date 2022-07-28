@@ -8,5 +8,9 @@
   <div class='post-container--buttons'>
     <%= link_to 'Add Comment', new_user_post_comment_path(user_id:current_user.id,post_id:post_data.id),method: :get ,class: 'comment-btn'%>
     <%= button_to 'Like', user_post_likes_path(user_id:current_user.id,post_id:post_data.id),method: :post ,class: 'like-btn'%>
+    
+    <% if can? :destroy, post_data %>
+      <%= button_to 'Delete post', user_post_path(current_user,post_data),method: :delete ,class: 'comment-btn'%>
+    <%end%>
   </div>
 </div>

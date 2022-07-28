@@ -45,11 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_28_110435) do
     t.index ["comments_counter"], name: "index_posts_on_comments_counter", order: :desc
   end
 
-  create_table "rspecs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "photo"
