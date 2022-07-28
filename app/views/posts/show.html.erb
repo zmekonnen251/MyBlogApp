@@ -1,4 +1,4 @@
-<%= render partial: 'shared/post_details' ,locals:{post_data: @post}%>
+<%= render model: 'posts', partial: 'shared/post_details' ,locals:{post_data: @post}%>
 <br>
 <% unless @post.comments_counter==0%>
   <%= render partial: 'shared/comment_container' ,locals:{comments_data: @post.most_recent_comments}%> 

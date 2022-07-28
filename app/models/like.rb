@@ -11,4 +11,5 @@ class Like < ApplicationRecord
   end
 
   after_create :update_likes_counter
+  after_destroy :decreament_likes_counter
 end
