@@ -1,29 +1,30 @@
 {
-  "name": "myblogapp",
-  "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zmekonnen251/MyBlogApp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zmekonnen251/MyBlogApp/issues"
-  },
-  "homepage": "https://github.com/zmekonnen251/MyBlogApp#readme",
-  "devDependencies": {
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0"
-  }
+	"name": "myblogapp",
+	"version": "1.0.0",
+	"description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+	"main": "index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"linter": "stylelint '**/*.{css,scss}' --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zmekonnen251/MyBlogApp.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zmekonnen251/MyBlogApp/issues"
+	},
+	"homepage": "https://github.com/zmekonnen251/MyBlogApp#readme",
+	"devDependencies": {
+		"stylelint": "^13.13.1",
+		"stylelint-config-standard": "^21.0.0",
+		"stylelint-csstree-validator": "^1.9.0",
+		"stylelint-scss": "^3.21.0"
+	}
 }
