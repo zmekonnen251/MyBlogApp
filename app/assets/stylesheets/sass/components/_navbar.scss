@@ -1,6 +1,6 @@
 @import '../abstract/variables';
 
-.main-header {
+.navbar {
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -19,11 +19,37 @@
     }
   }
 
-  &__add-post {
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    max-width: $screen_xs;
+
+    @media (min-width: $screen_xs) {
+      max-width: $screen_sm;
+    }
+
+    @media (min-width: $screen_sm) {
+      max-width: $screen_md;
+    }
+
+    @media (min-width: $screen_md) {
+      max-width: $screen_lg;
+    }
+
+    @media (min-width: $screen_lg) {
+      max-width: $screen_xl;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
     font-size: 1.5rem;
     color: $color_dark_gray;
     font-weight: bold;
-    margin-right: 2rem;
     text-transform: uppercase;
     padding: 1rem;
 

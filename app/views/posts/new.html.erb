@@ -1,7 +1,7 @@
 <div class='form-box'>
 <h1 class='form-box__heading'>Add New Post</h1>
 
-<%= form_with model: post,url: posts_path ,method: :post,local: true, scope: :post,class: 'form-box__form' do |f|%>
+<%=form_with model: @post,url: user_posts_url,method: :post,class: 'form-box__form' do |f|%>
   <div class='form-box__title'>
   <%= f.text_field :title,placeholder: 'Title' ,class: 'text-title'%>
 </div>
