@@ -1,0 +1,30 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.post-details {
+  @include box-container(column, 1rem, static, 55%);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--heading {
+    font-size: 1.7rem;
+  }
+
+  &--counters {
+    font-size: 1.5rem;
+  }
+
+  &__body {
+    &--title {
+      font-size: 1.7rem;
+    }
+
+    &--text {
+      font-size: 1.5rem;
+    }
+  }
+}

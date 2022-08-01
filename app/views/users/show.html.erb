@@ -1,0 +1,23 @@
+<%= render partial: 'shared/user' ,locals:{user_data: @user}%>
+
+<br>
+
+<div class='bio-container'>
+  <h3 class='bio-container--heading'>Bio</h3>
+  <p class='bio-container--body'><%= @user.bio %></p>
+</div>
+
+<% @user.most_recent_posts.each do |post|%>
+<%= link_to user_post_path(user_id: post.author.id,id: post.id),method: 'get',class: 'post_link' ,id: post.title.downcase do%>
+<%= render partial: 'shared/post' ,locals:{post_data: post}%>
+<%end%>
+<br>
+
+<%end%>
+
+<div class='btn-box'>
+   <%= button_to 'See All Posts',user_posts_path(user_id:@user.id),method: 'get',class: 'btn-posts'%>
+</div>
+
+
+

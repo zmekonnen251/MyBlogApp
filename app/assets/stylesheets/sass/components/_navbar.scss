@@ -1,0 +1,70 @@
+@import '../abstract/variables';
+
+.navbar {
+  position: fixed;
+  z-index: 40;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: -1rem auto;
+  padding: 2rem;
+  background-color: $color_light_gray;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 4rem;
+    font-weight: bold;
+
+    @media (max-width: $screen_xs) {
+      font-size: 3rem;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    max-width: $screen_xs;
+
+    @media (min-width: $screen_xs) {
+      max-width: $screen_sm;
+    }
+
+    @media (min-width: $screen_sm) {
+      max-width: $screen_md;
+    }
+
+    @media (min-width: $screen_md) {
+      max-width: $screen_lg;
+    }
+
+    @media (min-width: $screen_lg) {
+      max-width: $screen_xl;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $color_dark_gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+
+    @media (max-width: $screen_xs) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.logo-link {
+  text-decoration: none;
+  color: $color_dark_gray;
+}
