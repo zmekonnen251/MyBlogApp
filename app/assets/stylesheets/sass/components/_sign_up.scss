@@ -1,0 +1,39 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+.signup {
+  @include box-container(column, 0, static, fit-content);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__bio {
+    resize: none;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    color: $color_dark_gray;
+    text-align: center;
+  }
+
+  &__submit {
+    padding: 0.5rem 1rem;
+    box-shadow: 4px 4px 7px rgba($color_black, 0.3);
+    cursor: pointer;
+  }
+}
+
+.login-link {
+  font-size: 1.3rem;
+}

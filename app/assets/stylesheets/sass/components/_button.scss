@@ -26,3 +26,16 @@
   color: $color_dark_gray;
   place-self: center;
 }
+
+.remove-comment-btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.3rem;
+  text-transform: uppercase;
+  color: #f6f6f6;
+  place-self: center;
+  margin-top: 0.8rem;
+  border-style: none;
+  background-color: orangered;
+  font-size: 0.9rem;
+}

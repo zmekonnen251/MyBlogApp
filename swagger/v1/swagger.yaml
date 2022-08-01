@@ -1,0 +1,86 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  api_users/{user_id}/posts_list:
+    parameters:
+    - name: user_id
+      in: path
+      description: User ID
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list_all_user_posts
+      responses:
+        '200':
+          description: Success
+  api_users/{user_id}/posts_list/{post_id}:
+    parameters:
+    - name: user_id
+      in: path
+      description: User ID
+      required: true
+      schema:
+        type: string
+    - name: post_id
+      in: path
+      description: Post ID
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list_user_post
+      responses:
+        '200':
+          description: Success
+  api_users/{user_id}/posts_list/{post_id}/comments:
+    parameters:
+    - name: user_id
+      in: path
+      description: User ID
+      required: true
+      schema:
+        type: string
+    - name: post_id
+      in: path
+      description: Post ID
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list_user_post_comments
+      responses:
+        '200':
+          description: Success
+    post:
+      summary: add_comment
+      responses:
+        '200':
+          description: Success
+  api_users/{user_id}/posts_list/{post_id}/comments/:
+    parameters:
+    - name: user_id
+      in: path
+      description: User ID
+      required: true
+      schema:
+        type: string
+    - name: post_id
+      in: path
+      description: Post ID
+      required: true
+      schema:
+        type: string
+    post:
+      summary: add_comment
+      responses:
+        '200':
+          description: Success
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

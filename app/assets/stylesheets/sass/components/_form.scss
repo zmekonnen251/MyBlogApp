@@ -1,15 +1,9 @@
 @import '../abstract/variables';
+@import '../abstract/mixins';
 
 .form-box {
-  display: flex;
-  flex-direction: column;
-  max-width: 55%;
-  background-color: #f5f5f5;
-  padding: 20px;
-  margin: 1rem auto;
-  border-radius: 1rem;
-  box-shadow: 0.7rem 0.7rem 1rem rgba($color_black, 0.3);
-  gap: 2rem;
+  @include box-container(column, 1rem, static, 55%);
+
   text-align: center;
   align-items: center;
 

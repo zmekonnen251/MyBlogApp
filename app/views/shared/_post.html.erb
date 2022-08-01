@@ -14,3 +14,7 @@
     <%end%>
   </div>
 </div>
+
+<% unless post_data.comments_counter==0%>
+  <%= render partial: 'shared/comment_container' ,locals:{comments_data: post_data.most_recent_comments}%>
+<% end %>

@@ -1,8 +1,13 @@
 @import '../abstract/variables';
 
 .navbar {
-  max-width: 100%;
-  margin: 0 auto;
+  position: fixed;
+  z-index: 40;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: -1rem auto;
   padding: 2rem;
   background-color: $color_light_gray;
   margin-bottom: 2rem;
