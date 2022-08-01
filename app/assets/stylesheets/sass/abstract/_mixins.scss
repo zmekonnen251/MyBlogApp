@@ -1,14 +1,14 @@
 @import 'variables';
 
 @mixin box-container($direction, $gap, $position, $width) {
-	display: flex;
-	flex-direction: $direction;
-	gap: $gap;
-	max-width: $width;
-	background-color: $color_light_gray;
-	padding: 20px;
-	margin: 13rem auto 0 auto;
-	border-radius: 1rem;
-	box-shadow: 0.7rem 0.7rem 1rem rgba($color_black, 0.3);
-	position: $position;
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  max-width: $width;
+  background-color: $color_light_gray;
+  padding: 20px;
+  margin: 13rem auto 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0.7rem 0.7rem 1rem rgba($color_black, 0.3);
+  position: $position;
 }

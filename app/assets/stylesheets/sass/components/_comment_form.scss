@@ -2,43 +2,43 @@
 @import '../abstract/mixins';
 
 .comment-form {
-	@include box-container(column, 1rem, static, 55%);
+  @include box-container(column, 1rem, static, 55%);
 
-	&__heading {
-		font-size: 2.2rem;
-		color: $color_dark_gray;
-		text-align: center;
-	}
+  &__heading {
+    font-size: 2.2rem;
+    color: $color_dark_gray;
+    text-align: center;
+  }
 
-	&__btn {
-		font-size: 1.5rem;
-		color: $color_dark_gray;
-		font-weight: bold;
-		width: fit-content;
-		text-transform: uppercase;
-		padding: 1rem;
-		margin-top: 4rem;
+  &__btn {
+    font-size: 1.5rem;
+    color: $color_dark_gray;
+    font-weight: bold;
+    width: fit-content;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-top: 4rem;
 
-		@media (max-width: $screen_xs) {
-			font-size: 1.2rem;
-		}
+    @media (max-width: $screen_xs) {
+      font-size: 1.2rem;
+    }
 
-		place-self: center;
-	}
+    place-self: center;
+  }
 
-	&__input {
-		text-align: center;
-	}
+  &__input {
+    text-align: center;
+  }
 
-	&__text {
-		resize: none;
-		height: 3rem;
-		margin-bottom: 2rem;
-	}
+  &__text {
+    resize: none;
+    height: 3rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .comment-text-area {
-	margin-bottom: 1rem;
-	padding: 1rem;
-	resize: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  resize: none;
 }

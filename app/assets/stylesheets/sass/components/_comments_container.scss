@@ -2,14 +2,16 @@
 @import '../abstract/mixins';
 
 .comments-container {
-	@include box-container(column, 1rem, static, 55%);
-	margin-top: 3rem;
-	&--list {
-		list-style: none;
-		font-size: 1.5rem;
-	}
+  @include box-container(column, 1rem, static, 55%);
+
+  margin-top: 3rem;
+
+  &--list {
+    list-style: none;
+    font-size: 1.5rem;
+  }
 }
 
 .commenter {
-	font-weight: bold;
+  font-weight: bold;
 }

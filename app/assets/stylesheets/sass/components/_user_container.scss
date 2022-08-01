@@ -2,39 +2,41 @@
 @import '../abstract/mixins';
 
 .user-container {
-	@include box-container(row, 5rem, static, 55%);
-	margin-bottom: -7rem;
-	align-items: center;
-	&__img {
-		border-radius: 0.7rem;
-	}
+  @include box-container(row, 5rem, static, 55%);
 
-	&__detail {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		gap: 15rem;
-	}
+  margin-bottom: -7rem;
+  align-items: center;
 
-	&--post-counter {
-		position: absolute;
-		bottom: 3rem;
-		right: 4rem;
-		font-size: 1.5rem;
-	}
+  &__img {
+    border-radius: 0.7rem;
+  }
 
-	&--name {
-		font-size: 3rem;
-		font-weight: bold;
-		text-transform: capitalize;
-	}
+  &__detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15rem;
+  }
+
+  &--post-counter {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+    font-size: 1.5rem;
+  }
+
+  &--name {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
 }
 
 .user_link {
-	text-decoration: none;
-	color: $color_dark_gray;
+  text-decoration: none;
+  color: $color_dark_gray;
 }
 
 .users_last_child {
-	height: 3rem;
+  height: 3rem;
 }
