@@ -1,28 +1,41 @@
 @import '../abstract/variables';
 
 .btn-box {
-  text-align: center;
-  margin-bottom: 3rem;
+	text-align: center;
+	margin-bottom: 3rem;
 }
 
 .btn-posts {
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 2rem;
-  color: $color_dark_gray;
-  cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 1.5rem 4rem;
+	border-radius: 2rem;
+	color: $color_dark_gray;
+	cursor: pointer;
 }
 
 .pagination-btn-box {
-  text-align: center;
-  margin-bottom: 3rem;
+	text-align: center;
+	margin-bottom: 3rem;
 }
 
 .pagination-btn {
-  cursor: pointer;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  color: $color_dark_gray;
-  place-self: center;
+	cursor: pointer;
+	padding: 0.5rem;
+	text-transform: uppercase;
+	color: $color_dark_gray;
+	place-self: center;
+}
+
+.remove-comment-btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0.3rem;
+	text-transform: uppercase;
+	color: #f6f6f6;
+	place-self: center;
+	margin-top: 0.8rem;
+	border-style: none;
+	background-color: orangered;
+	font-size: 0.9rem;
 }

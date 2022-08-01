@@ -2,15 +2,7 @@
 <%@user_posts.each do |post|%>
   <%= link_to user_post_path(user_id: post.author.id,id: post.id),method: 'get',class: 'post_link' ,id: post.title.downcase do%>
   <%= render partial: 'shared/post' ,locals:{post_data: post,current_user_id: @current_user_id}%>
-  <br>
-
   <%end%>
-  <% unless post.comments_counter==0%>
-  <%= render partial: 'shared/comment_container' ,locals:{comments_data: post.most_recent_comments}%>
-  <br>
-  <% end %>
-  
-  
 <%end%>
 
 <div class='pagination-btn-box'>

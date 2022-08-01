@@ -1,38 +1,30 @@
 @import '../abstract/variables';
+@import '../abstract/mixins';
 
 .post-details {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 55%;
-  background-color: $color_light_gray;
-  padding: 20px;
-  margin: 1rem auto;
-  border-radius: 1rem;
-  box-shadow: 0.7rem 0.7rem 1rem rgba($color_black, 0.3);
+	@include box-container(column, 1rem, static, 55%);
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  &--heading {
-    font-size: 1.7rem;
-  }
+	&--heading {
+		font-size: 1.7rem;
+	}
 
-  &--counters {
-    font-size: 1.5rem;
-  }
+	&--counters {
+		font-size: 1.5rem;
+	}
 
-  &__body {
-    &--title {
-      font-size: 1.7rem;
-    }
+	&__body {
+		&--title {
+			font-size: 1.7rem;
+		}
 
-    &--text {
-      font-size: 1.5rem;
-    }
-  }
+		&--text {
+			font-size: 1.5rem;
+		}
+	}
 }
