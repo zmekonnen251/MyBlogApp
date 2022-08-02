@@ -82,3 +82,4 @@ end
 gem 'cancancan', '~> 3.4'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'jwt'
+gem 'uglifier', '~> 4.2'

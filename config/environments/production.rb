@@ -1,5 +1,5 @@
 require "active_support/core_ext/integer/time"
-
+require 'logger'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -80,7 +80,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Use a different logger for distributed setups.
-  # require "syslog/logger"
+  require "syslog/logger"
   config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
@@ -90,5 +90,6 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
+  # config.assets.enabled = true
   config.active_record.dump_schema_after_migration = false
 end
