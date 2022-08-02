@@ -60,7 +60,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "my_blog_app_production"
+  config.active_job.queue_name_prefix = "my_blog_app_production"
 
   config.action_mailer.perform_caching = false
 
@@ -80,7 +80,7 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
-  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
+  config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
